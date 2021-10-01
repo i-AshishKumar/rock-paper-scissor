@@ -36,6 +36,7 @@ function winDecider()
     if(document.getElementById('choice').src === document.getElementById('pcChoice').src)
     {
         document.getElementById('winner').innerText = "DRAW";
+        document.getElementById('winner').style.color ='black';
     }
 
     else if(document.getElementById('choice').src === Rock && document.getElementById('pcChoice').src === Paper)
