@@ -7,9 +7,8 @@ function setChoice(clicked_id)
     document.getElementById('choice').src=document.getElementById(clicked_id).src;
     document.getElementById('choice').width=100;
     document.getElementById('choice').height=100;
-    document.getElementById('player2choice').innerText="Computer is Choosing...."
 
-    setTimeout(() => {document.getElementById('player2choice').innerText="Computer's choice is ...";computerChoice();winDecider();},3000)
+    setTimeout(() => {document.getElementById('player2choice').innerText="Computer's choice is ...";computerChoice();winDecider();},50)
 }
 
 function computerChoice() 
@@ -42,30 +41,36 @@ function winDecider()
     else if(document.getElementById('choice').src === Rock && document.getElementById('pcChoice').src === Paper)
     {
         document.getElementById('winner').innerText = "COMPUTER WON";
+        document.getElementById('winner').style.color ='#ff1a1a';
     }
 
     else if(document.getElementById('choice').src === Rock && document.getElementById('pcChoice').src === Scissor)
     {
-        document.getElementById('winner').innerText = "YOU WON";
+        document.getElementById('winner').innerText = "YOU WON!!!";
+        document.getElementById('winner').style.color ='#ff6600';
     }
 
     else if(document.getElementById('choice').src === Paper && document.getElementById('pcChoice').src === Rock)
     {
-        document.getElementById('winner').innerText = "YOU WON";
+        document.getElementById('winner').innerText = "YOU WON!!!";
+        document.getElementById('winner').style.color ='#ff6600';
     }
 
     else if(document.getElementById('choice').src === Paper && document.getElementById('pcChoice').src === Scissor)
     {
         document.getElementById('winner').innerText = "COMPUTER WON";
+        document.getElementById('winner').style.color ='#ff1a1a';
     }
 
     else if(document.getElementById('choice').src === Scissor && document.getElementById('pcChoice').src === Rock)
     {
         document.getElementById('winner').innerText = "COMPUTER WON";
+        document.getElementById('winner').style.color ='#ff1a1a';
     }
 
     else if(document.getElementById('choice').src === Scissor && document.getElementById('pcChoice').src === Paper)
     {
-        document.getElementById('winner').innerText = "YOU WON";
+        document.getElementById('winner').innerText = "YOU WON!!!";
+        document.getElementById('winner').style.color ='#ff6600';
     }
 }
