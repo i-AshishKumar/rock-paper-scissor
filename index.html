@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,500&display=swap" rel="stylesheet">
+    <title>RPS</title>
+
+    <style>
+        body
+        {
+            font-family: 'Roboto';
+        }
+        .player1
+        {
+            display: flex;
+        }
+
+        .player1 img
+        {
+            border: 1px solid;
+            padding: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <script src="index.js"></script>
+    <h2>Pick a choice....</h2>
+    <div class="player1">
+        <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
+        <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
+        <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+
+        <h3>Your choice is:</h3>
+        <img src="" id="choice">
+    </div>
+
+    <h2 id="player2choice"></h2>
+    <div class="player2">
+        <img src="" id="pcChoice">
+    </div>
+
+    <div>
+        <h1 id="winner"></h1>
+    </div>
+</body>
+</html>
