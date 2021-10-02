@@ -17,6 +17,7 @@
         .player1
         {
             display: flex;
+            justify-content: center;
         }
 
         .player1 img
@@ -25,28 +26,45 @@
             padding: 20px;
         }
 
+        .player2
+        {
+            margin-bottom: 50px;
+        }
+
+        .Result
+        {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
     </style>
 
 </head>
 <body>
     <script src="index.js"></script>
-    <h2>Pick a choice....</h2>
-    <div class="player1">
-        <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
-        <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
-        <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
-    </div>
+    <center>
+        <h2>ROCK... PAPER... SCISSOR... SHOOT!</h2>
+        <div class="player1">
+            <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
+            <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
+            <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+        </div>
 
-    <h2>Your choice is....</h2>
-    <img src="" id="choice">
+        <h2>Your choice is....</h2>
+        <img src="" id="choice">
 
-    <h2 id="player2choice"></h2>
-    <div class="player2">
-        <img src="" id="pcChoice">
-    </div>
+        <h2 id="player2choice"></h2>
+        <div class="player2">
+            <img src="" id="pcChoice">
+        </div>
+    </center>
 
     <div class="Result">
         <h1 id="winner"></h1>
+        <h1 id="totalplayed"></h1>
+        <h1 id="yourscore"></h1>
+        <h1 id="compscore"></h1>
     </div>
+
 </body>
 </html>
