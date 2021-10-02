@@ -14,21 +14,44 @@
         {
             font-family: 'Roboto';
         }
-        .player1
+
+        .player1options
         {
             display: flex;
             justify-content: center;
         }
 
-        .player1 img
+        .player1options img
         {
-            border: 1px solid;
+            border: 1px solid pink;
             padding: 20px;
+        }
+
+        .players
+        {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .player1
+        {
+            padding: 50px;
+            padding-top: 10px;
+            border: 1px solid violet;
+        }
+
+        .outcome
+        {
+
         }
 
         .player2
         {
-            margin-bottom: 50px;
+            padding: 50px;
+            padding-top: 10px;
+            border: 1px solid violet;
         }
 
         .Result
@@ -42,26 +65,31 @@
 </head>
 <body>
     <script src="index.js"></script>
-    <center>
-        <h2>ROCK... PAPER... SCISSOR... SHOOT!</h2>
+    <h2 style="text-align: center;">ROCK... PAPER... SCISSOR... SHOOT!</h2>
+    <div class="player1options">
+        <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
+        <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
+        <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+    </div>
+
+    <h1 id="totalplayed" style="text-align: center;"></h1>
+
+    <div class="players">
         <div class="player1">
-            <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
-            <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
-            <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+            <h2 style="margin: 0;">Your choice</h2>
+            <img src="" id="choice" style="margin-top: 20px;">
         </div>
 
-        <h2>Your choice is....</h2>
-        <img src="" id="choice">
+        <div class="outcome">
+            <h1 id="winner"></h1>
+        </div>
 
-        <h2 id="player2choice"></h2>
         <div class="player2">
-            <img src="" id="pcChoice">
+            <h2 id="player2choice" style="margin: 0;text-align: center;"></h2>
+            <img src="" id="pcChoice" style="margin-top: 20px;">
         </div>
-    </center>
-
+    </div>
     <div class="Result">
-        <h1 id="winner"></h1>
-        <h1 id="totalplayed"></h1>
         <h1 id="yourscore"></h1>
         <h1 id="compscore"></h1>
     </div>

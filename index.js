@@ -14,7 +14,7 @@ function setChoice(clicked_id)
 
     totalPlays++;
     document.getElementById('totalplayed').innerText  =  'Total matches: ' + totalPlays;
-    document.getElementById('player2choice').innerText="Computer's choice is ...";
+    document.getElementById('player2choice').innerText= "Comp choice";
     
     computerChoice();
     winDecider();
