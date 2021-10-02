@@ -6,22 +6,18 @@ var yourScore = 0;
 var compScore = 0;
 var totalPlays = 0;
 
-function setChoice(clicked_id) 
-{
+function setChoice(clicked_id) {
     document.getElementById('choice').src=document.getElementById(clicked_id).src;
     document.getElementById('choice').width=100;
     document.getElementById('choice').height=100;
 
     totalPlays++;
-    document.getElementById('totalplayed').innerText  =  'Total matches: ' + totalPlays;
-    document.getElementById('player2choice').innerText= "Comp choice";
-    
+
     computerChoice();
     winDecider();
 }
 
-function computerChoice() 
-{
+function computerChoice() {
     document.getElementById('pcChoice').width=100;
     document.getElementById('pcChoice').height=100;
     var val = Math.ceil(Math.random()*3);
@@ -40,9 +36,9 @@ function computerChoice()
     }
 }
 
-function winDecider() 
-{
+function winDecider() {
 
+    document.getElementById('totalplayed').innerText  =  'Total matches: ' + totalPlays;
     if(document.getElementById('choice').src === document.getElementById('pcChoice').src)
     {
         document.getElementById('winner').innerText = "DRAW";
@@ -94,8 +90,27 @@ function winDecider()
     scoreCal();
 }
 
-function scoreCal(params) 
-{ 
+function scoreCal() { 
+    document.getElementById('yourscore').innerText  = 'Your Score: ' + yourScore;
+    document.getElementById('compscore').innerText  = 'Computer Score: ' + compScore;
+}
+
+
+function resetGame() { 
+    
+    yourScore = 0;
+    compScore = 0;
+    totalPlays = 0;
+
+    document.getElementById('choice').src="";
+    document.getElementById('choice').width=0;
+    document.getElementById('choice').height=0;
+
+    document.getElementById('pcChoice').src="";
+    document.getElementById('pcChoice').width=0;
+    document.getElementById('pcChoice').height=0;
+
+    document.getElementById('totalplayed').innerText  =  'Total matches: ' + totalPlays;
     document.getElementById('yourscore').innerText  = 'Your Score: ' + yourScore;
     document.getElementById('compscore').innerText  = 'Computer Score: ' + compScore;
 }

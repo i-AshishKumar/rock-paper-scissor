@@ -15,10 +15,16 @@
             font-family: 'Roboto';
         }
 
+        #hide1
+        {
+            /* display: none; */
+        }
+
         .player1options
         {
             display: flex;
             justify-content: center;
+            cursor: pointer;
         }
 
         .player1options img
@@ -60,16 +66,38 @@
             justify-content: space-evenly;
         }
 
+        #reset
+        {
+            font-weight: 1000;
+            cursor: pointer;
+            border: none;
+            border-radius: 15px;
+            background-color: violet;
+            color: white;
+            padding: 15px;
+        }
+
+        #reset:hover
+        {
+            border: none;
+            background-color: black;
+            color: white;
+            padding: 15px;
+        }
+
     </style>
 
 </head>
 <body>
     <script src="index.js"></script>
     <h2 style="text-align: center;">ROCK... PAPER... SCISSOR... SHOOT!</h2>
-    <div class="player1options">
-        <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
-        <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
-        <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+    
+    <div id="hide1">
+        <div class="player1options">
+            <img src="https://pngimg.com/uploads/stone/stone_PNG13592.png" alt="Rock" width="100" height="100" id="rock" onclick="setChoice(this.id)">
+            <img src="https://pngimg.com/uploads/paper_sheet/small/paper_sheet_PNG7234.png" alt="paper" width="100" height="100" id="paper" onclick="setChoice(this.id)">
+            <img src="https://pngimg.com/uploads/scissors/small/scissors_PNG2.png" alt="Scissor" width="100" height="100" id="scissor" onclick="setChoice(this.id)">
+        </div>
     </div>
 
     <h1 id="totalplayed" style="text-align: center;"></h1>
@@ -85,7 +113,7 @@
         </div>
 
         <div class="player2">
-            <h2 id="player2choice" style="margin: 0;text-align: center;"></h2>
+            <h2 id="player2choice" style="margin: 0;text-align: center;">Comp choice</h2>
             <img src="" id="pcChoice" style="margin-top: 20px;">
         </div>
     </div>
@@ -93,6 +121,6 @@
         <h1 id="yourscore"></h1>
         <h1 id="compscore"></h1>
     </div>
-
+    <center><button onclick="resetGame()" id="reset">Reset Game</button></center>
 </body>
 </html>
